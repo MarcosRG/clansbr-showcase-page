@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Instagram, MapPin, Phone } from "lucide-react";
 import heroImage from "@/assets/hero-gaming.jpg";
+import logoImage from "@/assets/clansbr-logo.jpg";
 
 const HeroSection = () => {
   return (
@@ -24,14 +25,13 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+          className="flex flex-col items-center"
         >
-          <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-black tracking-tight mb-2">
-            <span className="text-primary text-glow-red">CLANS</span>
-            <span className="text-foreground">BR</span>
-          </h1>
-          <p className="font-heading text-xl md:text-2xl text-muted-foreground tracking-[0.3em] uppercase mb-8">
-            Brusque
-          </p>
+          <img
+            src={logoImage}
+            alt="ClansBR - Desde 2002"
+            className="w-full max-w-2xl mb-8 rounded-lg"
+          />
         </motion.div>
 
         <motion.p
@@ -40,7 +40,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="text-lg md:text-xl text-secondary-foreground/80 max-w-2xl mx-auto mb-10 font-body"
         >
-          A melhor experiência gaming de Brusque. PCs de última geração, PlayStation 5 e Xbox Series X.
+          A melhor experiência gaming de Brusque. PCs de última geração, PlayStation 5 e Simulador.
         </motion.p>
 
         <motion.div
