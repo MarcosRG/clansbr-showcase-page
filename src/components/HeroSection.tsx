@@ -1,0 +1,87 @@
+import { motion } from "framer-motion";
+import { Instagram, MapPin, Phone } from "lucide-react";
+import heroImage from "@/assets/hero-gaming.jpg";
+
+const HeroSection = () => {
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img
+          src={heroImage}
+          alt="ClansBR Brusque - Interior da LAN House gaming"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+      </div>
+
+      {/* Grid overlay */}
+      <div className="absolute inset-0 bg-grid-pattern opacity-20" />
+
+      {/* Content */}
+      <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-black tracking-tight mb-2">
+            <span className="text-primary text-glow-red">CLANS</span>
+            <span className="text-foreground">BR</span>
+          </h1>
+          <p className="font-heading text-xl md:text-2xl text-muted-foreground tracking-[0.3em] uppercase mb-8">
+            Brusque
+          </p>
+        </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="text-lg md:text-xl text-secondary-foreground/80 max-w-2xl mx-auto mb-10 font-body"
+        >
+          A melhor experiência gaming de Brusque. PCs de última geração, PlayStation 5 e Xbox Series X.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="flex flex-col sm:flex-row gap-4 justify-center"
+        >
+          <a
+            href="https://www.instagram.com/clansbrbq/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-heading text-sm font-semibold tracking-wider uppercase transition-all hover:scale-105 glow-border-red"
+          >
+            <Instagram className="w-5 h-5" />
+            Siga no Instagram
+          </a>
+          <a
+            href="tel:+554730490552"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-lg border border-border text-foreground font-heading text-sm font-semibold tracking-wider uppercase transition-all hover:bg-secondary hover:scale-105"
+          >
+            <Phone className="w-5 h-5" />
+            Ligue Agora
+          </a>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.8 }}
+          className="mt-12 flex items-center justify-center gap-2 text-muted-foreground text-sm"
+        >
+          <MapPin className="w-4 h-4 text-primary" />
+          <span>Av. Cônsul Carlos Renaux, 182 - Centro, Brusque - SC</span>
+        </motion.div>
+      </div>
+
+      {/* Bottom gradient fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
+    </section>
+  );
+};
+
+export default HeroSection;
