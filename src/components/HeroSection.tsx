@@ -1,24 +1,35 @@
 import { motion } from "framer-motion";
 import { Instagram, MapPin, Phone } from "lucide-react";
-import bannerImage from "@/assets/clansbr-banner.jpg";
+import heroBg from "@/assets/hero-gaming-bg.jpg";
+import logoImage from "@/assets/clansbr-logo.png";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Banner Image as full background */}
+      {/* Gaming background */}
       <div className="absolute inset-0">
         <img
-          src={bannerImage}
-          alt="ClansBR - Desde 2002"
+          src={heroBg}
+          alt="Gaming background"
           className="w-full h-full object-cover"
         />
+        <div className="absolute inset-0 bg-background/40" />
       </div>
 
       {/* Bottom fadeout to background */}
       <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-background via-background/80 to-transparent" />
 
-      {/* Content overlay at bottom */}
-      <div className="relative z-10 text-center px-4 max-w-5xl mx-auto mt-auto pb-32">
+      {/* Content */}
+      <div className="relative z-10 text-center px-4 max-w-5xl mx-auto flex flex-col items-center">
+        <motion.img
+          src={logoImage}
+          alt="ClansBR - Desde 2002"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          className="w-full max-w-lg mb-10 drop-shadow-[0_0_30px_hsl(0_100%_60%/0.4)]"
+        />
+
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
