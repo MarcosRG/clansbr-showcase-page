@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
-import { Monitor, Gamepad2, Wifi, Users, Moon } from "lucide-react";
+import { Monitor, Gamepad2, Wifi, Users, Moon, ShoppingCart } from "lucide-react";
 import gamingPcImage from "@/assets/gaming-pc.jpg";
 import ps5SimuladorImage from "@/assets/ps5-simulador.png";
 import internetImage from "@/assets/internet-speed.jpg";
 import ambiente5x5Image from "@/assets/ambiente-5x5.png";
 import corujaoImage from "@/assets/corujao.jpg";
+import vendaPcsImage from "@/assets/venda-pcs.jpg";
 
 const equipments = [
   {
@@ -45,6 +46,14 @@ const equipments = [
     description: "Toda sexta e sábado das 22h até 5h! Venha curtir a madrugada jogando com os amigos. Promoções especiais, muita diversão e aquela energia gamer que só a noite traz.",
     image: corujaoImage,
     imageAlt: "Corujão gaming na ClansBR",
+    link: null,
+  },
+  {
+    icon: ShoppingCart,
+    title: "Venda de PCs Gamers",
+    description: "Monte a sua máquina gamer com o melhor preço e assistência técnica especializada do mercado. Peças selecionadas, montagem profissional e suporte completo.",
+    image: vendaPcsImage,
+    imageAlt: "Venda e montagem de PCs gamers na ClansBR",
     link: null,
   },
 ];
